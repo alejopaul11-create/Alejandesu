@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medicina - Alejandesu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+    .mySlides {display: none}
+    </style>
+  </head>
+<body class="w3-content w3-border-left w3-border-right">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+    <h3>Medicina</h3>
+    <h6>Autor: Alejandesu</h6>
+    <hr>
+    <p class="w3-small">Sitio educativo sobre la carrera de Medicina. Información anónima y de carácter informativo.</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#inicio" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-home"></i> Inicio</a>
+    <a href="#sobre" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-user-md"></i> Sobre la carrera</a>
+    <a href="#plan" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-book"></i> Plan de estudios</a>
+    <a href="#clinica" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-stethoscope"></i> Habilidades clínicas</a>
+    <a href="#investigacion" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-flask"></i> Investigación</a>
+    <a href="#fuentes" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-link"></i> Fuentes</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <span class="w3-bar-item">Medicina</span>
+  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header (Imágenes de uso libre - placeholders) -->
+  <div class="w3-container" id="inicio">
+    <h2 class="w3-text-green">Bienvenido a Medicina</h2>
+    <div class="w3-display-container mySlides">
+      <img src="images/01_cover_clinica.jpg" alt="Clínica" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Habilidades Clínicas</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="images/02_plan_estudios.jpg" alt="Plan de estudios" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Plan de Estudios</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="images/03_investigacion.jpg" alt="Investigación" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Investigación</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="images/04_recursos.jpg" alt="Recursos" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Recursos</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/01_cover_clinica.jpg" alt="Clínica" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Habilidades Clínicas">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/02_plan_estudios.jpg" alt="Plan de estudios" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Plan de estudios">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/03_investigacion.jpg" alt="Investigación" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Investigación">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/04_recursos.jpg" alt="Recursos" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Recursos">
+    </div>
+  </div>
+
+  <div class="w3-container" id="sobre">
+    <h4><strong>Sobre la carrera</strong></h4>
+    <p>La carrera de Medicina forma profesionales para la atención integral de la salud humana. Se estudian ciencias básicas, clínico-quirúrgicas y formación ética. Este sitio presenta una guía estructurada y recursos de estudio.</p>
+    <img src="images/05_sobre.jpg" alt="Sobre la carrera" style="width:100%;max-width:600px;margin-top:8px">
+    <hr>
+
+    <h4 id="plan"><strong>Plan de estudios </strong></h4>
+    <p>La organización sugerida es lineal por años, con un enfoque práctico-distributivo que permite avanzar progresivamente desde lo teórico hacia lo clínico:</p>
+    <p>Años 1-2: Se estudian las ciencias básicas que constituyen el fundamento de la Medicina: anatomía, fisiología, bioquímica, histología y microbiología. Estas asignaturas permiten comprender el funcionamiento normal del cuerpo humano y sentar las bases para el estudio de las enfermedades.</p>
+    <p>Años 3-4: Se introducen las ciencias clínicas básicas, como patología, farmacología y semiología, junto con las primeras rotaciones hospitalarias. El estudiante comienza a relacionar la teoría con la práctica, aprendiendo a identificar signos y síntomas, y a aplicar los conocimientos en escenarios reales.</p>
+    <p>Años 5-6: Se realizan rotaciones clínicas avanzadas en distintas especialidades (medicina interna, cirugía, pediatría, ginecología, psiquiatría, entre otras). Además, se lleva a cabo el internado rotativo, donde el estudiante asume responsabilidades más directas en la atención de pacientes. En esta etapa también se fomenta la investigación y la elaboración de proyectos académicos.</p>
+    <p>Este plan busca que el futuro médico adquiera una visión integral de la salud, desde la prevención hasta el tratamiento y la rehabilitación.</p>
+    <img src="images/06_plan.png" alt="Plan de estudios diagrama" style="width:100%;max-width:600px;margin-top:8px">
+    <hr>
+
+    <h4 id="clinica"><strong>Habilidades clínicas</strong></h4>
+    <p>Las habilidades prácticas recomendadas incluyen:</p>
+    <ul>
+      <li>Examen físico completo: capacidad de evaluar al paciente de manera sistemática, identificando hallazgos relevantes.</li>
+      <li>Reanimación cardiopulmonar (RCP): destreza fundamental para responder en situaciones de emergencia.</li>
+      <li>Toma de historia clínica: habilidad para obtener información precisa y detallada, estableciendo una relación de confianza con el paciente.</li>
+      <li>Interpretación de pruebas básicas: análisis de exámenes de laboratorio, radiografías y otros estudios complementarios.</li>
+      <li>Comunicación efectiva: transmitir información médica de manera clara y empática, tanto a pacientes como a colegas.</li>
+      <li>Trabajo en equipo: colaborar con otros profesionales de la salud en la atención integral.</li>
+    </ul>
+    <img src="images/07_clinica.jpg" alt="Habilidades clínicas" style="width:100%;max-width:600px;margin-top:8px">
+    <hr>
+
+    <h4 id="investigacion"><strong>Investigación</strong></h4>
+    <p>La investigación es un pilar esencial en la formación médica, ya que permite generar nuevo conocimiento y mejorar la práctica clínica. Algunos temas sugeridos para proyectos son:</p>
+    <ul>
+      <li>Epidemiología local: estudios sobre la prevalencia de enfermedades en la comunidad y factores de riesgo asociados.</li>
+      <li>Revisiones sistemáticas: análisis crítico de la literatura científica para responder preguntas clínicas específicas.</li>
+      <li>Estudios de caso clínico: descripción y discusión de casos relevantes que aporten al aprendizaje y a la práctica médica.</li>
+      <li>Innovación en salud pública: propuestas para mejorar la cobertura, accesibilidad y calidad de los servicios de salud.</li>
+    </ul>
+    <img src="images/08_investigacion.jpg" alt="Investigación" style="width:100%;max-width:600px;margin-top:8px">
+    <hr>
+
+    <h4 id="fuentes"><strong>Fuentes y referencias</strong></h4>
+    <p>Este sitio web fue creado utilizando las siguientes fuentes y herramientas:</p>
+    <ul>
+      <li>Framework CSS: W3.CSS (versión 4) – w3schools.com/w3css</li>
+      <li>Fuente: Raleway de Google Fonts – fonts.google.com</li>
+      <li>Iconos: Font Awesome (versión 4.7.0) – fontawesome.com</li>
+      <li>Template base: Adaptado de W3Schools Spaces template – w3schools.com/spaces</li>
+      <li>Información sobre Medicina: Basado en conocimientos generales de la carrera de Medicina; referencias específicas pueden añadirse según necesidad.</li>
+    </ul>
+    <p>Contenido anónimo y educativo, creado con HTML puro y apoyo de IA para edición.</p>
+  </div>
+  <footer class="w3-container w3-padding-16" style="margin-top:32px">Contenido anónimo para fines educativos — Autor: Alejandesu</footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join our mailing list to receive updates on available dates and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+</body>
+</html>
